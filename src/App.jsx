@@ -1,16 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import CompFun from './CompFun'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <h1>Learn React</h1>
-      <h2>By : Shahid Naeem</h2>
-
+      <h2>With Shahid Naeem</h2>
+      <CompFun />
     </>
 
   )
