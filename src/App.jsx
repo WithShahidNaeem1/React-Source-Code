@@ -1,17 +1,17 @@
+import { useState } from 'react'
 import './App.css'
-import ArrayWithProps from './ArrayWithProps'
+import UseStateAsProps from './UseStateAsProps'
 
 function App() {
-  let university=['UET', 'UCP', 'MUL','UMT','PU'];
-
+  const[empName,setEmpName]=useState("Yasmin Khan");
+ 
 return (
   <>
     <h1 style={{ color: "chocolate" }}>Learn React (by) Shahid Naeem</h1>
-    <ArrayWithProps uni={university[0]} />
-    <ArrayWithProps uni={university[1]} />
-    <ArrayWithProps uni={university[2]} />
-    <ArrayWithProps uni={university[3]} />
-    <ArrayWithProps uni={university[4]} />
+    {
+    empName && <UseStateAsProps emp={empName} />
+    }
+    <button onClick={()=> setEmpName("Fareeha Khan")}>Change Name</button>
   </>
 )
 }
