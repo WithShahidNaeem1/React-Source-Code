@@ -1,12 +1,12 @@
 import './App.css'
-import SpreadInReact from './SpreadInReact'
+import CheckBox from './CheckBox'
 
 function App() {
    
 return (
   <>
     <h1 style={{ color: "chocolate" }}>Learn React (with) Shahid Naeem</h1>
- <SpreadInReact />
+<CheckBox />
   </>
 )
 }
