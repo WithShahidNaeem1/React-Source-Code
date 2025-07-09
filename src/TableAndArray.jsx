@@ -1,4 +1,5 @@
 import React from 'react'
+import EmpCards from './EmpCards';
 
 function TableAndArray() {
     const empInfo = [
@@ -37,40 +38,35 @@ function TableAndArray() {
             salary: 75000,
             email: 'nabeel@ymail.com'
         },
-
+{
+            id: '6',
+            name: 'Yasir Ali',
+            age: 55,
+            salary: 75000,
+            email: 'nabeel@ymail.com'
+        },
+        {
+            id: '7',
+            name: 'Sobia Khan',
+            age: 55,
+            salary: 75000,
+            email: 'nabeel@ymail.com'
+        },
 
     ];
 
     return (
         <div>
-            <h1>Array Data in Table</h1>
-            <table border='1'>
-                <thead>
-                    <tr style={{ color: 'red' }}>
-                        <td>ID</td>
-                        <td>NAME</td>
-                        <td>AGE</td>
-                        <td>SALARY</td>
-                        <td>EMAIL</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        empInfo.map((user) => (
-                            <tr key={user.id}>
-                                <td>{user.id}</td>
-                                <td>{user.name}</td>
-                                <td>{user.age}</td>
-                                <td>{user.salary}</td>
-                                <td>{user.email}</td>
-                            </tr>
+            <h1>Array Data with Props</h1>
+            {
+                empInfo.map((user) => (
+                    <div key={user.id}>
+                        <EmpCards data={user} />
+                    </div>
+                ))
 
-                        ))
+            }
 
-                    }
-
-                </tbody>
-            </table>
         </div>
     )
 }
