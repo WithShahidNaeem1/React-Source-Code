@@ -1,60 +1,100 @@
 import React from 'react'
-import Card from './Card';
+import Dummy1 from './Dummy1';
 
 function Dummy() {
-    const empInfo = [
+    const uni=[
         {
-            id: '1',
-            name: 'Bilal',
-            age: 35,
-            salary: 35000,
-            email: 'bilal@ymail.com'
+            uniName: "XMT",
+            city:"Karachi",
+            email:"xmt@ymail.com",
+            courses:[
+                {
+                    course :'BSCS',
+                    duration : '4 Years',
+                    SemesterFee: 'Rs. 75000/-'
+                },
+                {
+                    course :'MBA',
+                    duration : '4 Years',
+                    SemesterFee: 'Rs. 75000/-'
+                },
+                {
+                    course :'MARKETING',
+                    duration : '4 Years',
+                    SemesterFee: 'Rs. 75000/-'
+                },
+            ]
         },
-        {
-            id: '2',
-            name: 'Tahir',
-            age: 45,
-            salary: 65000,
-            email: 'tahir@ymail.com'
+         {
+            uniName: "XMT",
+            city:"Karachi",
+            email:"xmt@ymail.com",
+            courses:[
+                {
+                    course :'BSCS',
+                    duration : '4 Years',
+                    SemesterFee: 'Rs. 75000/-'
+                },
+                {
+                    course :'BSCS',
+                    duration : '4 Years',
+                    SemesterFee: 'Rs. 75000/-'
+                },
+                {
+                    course :'BSCS',
+                    duration : '4 Years',
+                    SemesterFee: 'Rs. 75000/-'
+                },
+            ]
         },
-        {
-            id: '3',
-            name: 'Naveed',
-            age: 25,
-            salary: 45000,
-            email: 'naveed@ymail.com'
+         {
+            uniName: "XMT",
+            city:"Karachi",
+            email:"xmt@ymail.com",
+            courses:[
+                {
+                    course :'BSCS',
+                    duration : '4 Years',
+                    SemesterFee: 'Rs. 75000/-'
+                },
+                {
+                    course :'BSCS',
+                    duration : '4 Years',
+                    SemesterFee: 'Rs. 75000/-'
+                },
+                {
+                    course :'BSCS',
+                    duration : '4 Years',
+                    SemesterFee: 'Rs. 75000/-'
+                },
+            ]
         },
-        {
-            id: '4',
-            name: 'Sadia',
-            age: 44,
-            salary: 56000,
-            email: 'sadia@ymail.com'
-        },
-        {
-            id: '5',
-            name: 'Nabeel',
-            age: 55,
-            salary: 75000,
-            email: 'nabeel@ymail.com'
-        },
-
-
     ];
-
-    return (
-        <div>
-            <h1>Array Data in Table</h1>
-            {
-                empInfo.map((user)=>(
-                    <div key={user.id}> 
-                        <Card data={user} />
-                    </div>
-
-                ))
-            }         
-        </div>
-    )
+  return (
+    <div>
+        <h1 style={{color:'red'}}>List of Universities</h1>
+        {
+            uni.map((uni,index)=>(
+               <div key={index} style={{
+                backgroundColor:'#ccc',
+                margin: '20px',
+                padding:'20px',
+                borderBottom:'4px solid black',
+                borderRadius:'10px',
+                width:'800px',
+                
+               }}>
+                <h1>University Name :<span style={{color:'green'}}>{uni.uniName}</span> </h1>
+                <h2>City: <span style={{color:'green'}}>{uni.city}</span></h2>
+                <h2>Email: {uni.email}</h2>
+                <h2 style={{color:'green'}}>Courses Detail</h2>
+                <Dummy1 courses={uni.courses}/>
+                </div> 
+            ))
+            
+        }
+    </div>
+  )
 }
 
 export default Dummy
