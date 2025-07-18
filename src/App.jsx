@@ -1,11 +1,11 @@
-import UseEffect from "./UseEffect"
+import CurrentDate from "./CurrentDate"
 
 
 function App() {
-   return (
+     return (
   <>
     <h1 style={{ color: "chocolate" }}>Learn React (with) Shahid Naeem</h1>
-    <UseEffect />
+    <CurrentDate />
   </>
 )
 }
