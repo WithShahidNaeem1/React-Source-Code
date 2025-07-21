@@ -1,25 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
-function Dummy1({color , bcolor}) {
-const [time,setTime]=useState(new Date());
+function Dummy1({ counter , data}) {
+    const onceRun = () => {
+        console.log("Value of Black:",counter);
+    }
+
+    const redFun=()=>{
+        console.log("Red Value is Changed",data);
+    }
 
     useEffect(() => {
-        const intervalID = setInterval(() => {
-            setTime(new Date());
-        }, 1000);
+        redFun();
+    }, [data]);
 
-            return ()=> clearInterval(intervalID);
-    }, []);
+    useEffect(() => {
+        onceRun();
+    }, [counter]);
+
 
     return (
         <div>
-            <h1 style={{
-                color:color,
-                width:'120px',
-                padding:'10px',
-                backgroundColor:bcolor,
-                borderRadius:'5px'
-            }}>{time.toLocaleTimeString()}</h1>
+            <h1>Counter Value : {counter}</h1>
+            <h1 style={{color:'red'}}>Red Value : {data}</h1>
         </div>
     )
 }
