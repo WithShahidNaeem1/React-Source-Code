@@ -1,10 +1,16 @@
-import Black from "./Black"
+import { useState } from "react"
+import LifeCycle from "./LifeCycle"
 
 function App() {
-     return (
+  const [display,setDisplay]=useState(true);
+       return (
   <>
     <h1 style={{ color: "chocolate" }}>Learn React (with) Shahid Naeem</h1>
-   <Black />
+    {
+      display?<LifeCycle />:null
+    }
+    <br />
+    <button onClick={()=>setDisplay(!display)}>Hide/Display</button>
   </>
 )
 }
