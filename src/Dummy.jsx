@@ -1,32 +1,120 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 function Dummy() {
-  const [counter,setCounter]=useState(1);
-
-  function whenMount(){
-  console.log("Component is Mounted");
-}
-
-function whenUpdate(){
-  console.log("Component is Updating");
-}
-
-function whenEnd(){
-  console.log("Component Unmounted/Ended");
-}
-
-useEffect(()=>{whenMount();},[]);
-useEffect(()=>{whenUpdate();},[counter]);
-useEffect(()=>{
-
-  return ()=> whenEnd();
-},[]);
-  
+  const empCard = {
+    border: '4px solid gray',
+    width: '200px',
+    boxShadow: '5px 5px 5px gray',
+    margin: '10px',
+    borderRadius: '10px',
+    textAlign: 'center'
+  }
   return (
-    <div>
-      <h1>Value:{counter}</h1>
-      <button onClick={()=>setCounter(counter+1)}>Increase</button>
-    </div>
+    <>
+      <h1 style={{ color: 'red' }}>Employee Cards</h1>
+      <div style={{display:'flex',flexWrap:'wrap'}}>
+        <div style={empCard}>
+          <img style={{
+            width: '200px',
+            borderTopLeftRadius: '5px',
+            borderTopRightRadius: '5px'
+          }} src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+
+          <div>
+            <h2>Mohsin Nadeem</h2>
+            <h4>Web Developer</h4>
+          </div>
+        </div>
+        <div style={empCard}>
+          <img style={{
+            width: '200px',
+            borderTopLeftRadius: '5px',
+            borderTopRightRadius: '5px'
+          }} src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+
+          <div>
+            <h2>Mohsin Nadeem</h2>
+            <h4>Web Developer</h4>
+          </div>
+        </div>
+        <div style={empCard}>
+          <img style={{
+            width: '200px',
+            borderTopLeftRadius: '5px',
+            borderTopRightRadius: '5px'
+          }} src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+
+          <div>
+            <h2>Mohsin Nadeem</h2>
+            <h4>Web Developer</h4>
+          </div>
+        </div>
+        <div style={empCard}>
+          <img style={{
+            width: '200px',
+            borderTopLeftRadius: '5px',
+            borderTopRightRadius: '5px'
+          }} src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+
+          <div>
+            <h2>Mohsin Nadeem</h2>
+            <h4>Web Developer</h4>
+          </div>
+        </div>
+         <div style={empCard}>
+          <img style={{
+            width: '200px',
+            borderTopLeftRadius: '5px',
+            borderTopRightRadius: '5px'
+          }} src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+
+          <div>
+            <h2>Mohsin Nadeem</h2>
+            <h4>Web Developer</h4>
+          </div>
+        </div>
+        <div style={empCard}>
+          <img style={{
+            width: '200px',
+            borderTopLeftRadius: '5px',
+            borderTopRightRadius: '5px'
+          }} src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+
+          <div>
+            <h2>Mohsin Nadeem</h2>
+            <h4>Web Developer</h4>
+          </div>
+        </div>
+        <div style={empCard}>
+          <img style={{
+            width: '200px',
+            borderTopLeftRadius: '5px',
+            borderTopRightRadius: '5px'
+          }} src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+
+          <div>
+            <h2>Mohsin Nadeem</h2>
+            <h4>Web Developer</h4>
+          </div>
+        </div>
+        <div style={empCard}>
+          <img style={{
+            width: '200px',
+            borderTopLeftRadius: '5px',
+            borderTopRightRadius: '5px'
+          }} src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+
+          <div>
+            <h2>Mohsin Nadeem</h2>
+            <h4>Web Developer</h4>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </>
   )
 }
 
