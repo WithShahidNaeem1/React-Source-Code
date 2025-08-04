@@ -1,31 +1,11 @@
-import StudentCard from "./StudentCard"
+import StyledComp from "./StyledComp"
 
 function App() {
-  return (
+
+   return (
     <>
       <h1 style={{ color: "chocolate" }}>Learn React (with) Shahid Naeem</h1>
-      
-      <div style={{display:'flex', flexWrap:'wrap'}}>
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-
-      </div>
-
-
-      
+        <StyledComp />       
       
     </>
   )

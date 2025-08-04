@@ -1,106 +1,28 @@
 import React from 'react'
-import './myStyle.css'
+import styled from 'styled-components'
 
 function Dummy1() {
-    return (
-        <div>
-            <h1 className='heading'>External CSS</h1>
-            <div className='container'>
-                <div className='card'>
-                    <div>
-                        <img className='img-style' src="https://images.unsplash.com/photo-1660603135468-6e3be1a106c0?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                    </div>
-                    <div>
-                        <h2 className='heading'>Wooden Table Lamp</h2>
-                        <h3>Price : Rs. 2500/-</h3>
-                    </div>
-                </div>
-                 <div className='card'>
-                    <div>
-                        <img className='img-style' src="https://images.unsplash.com/photo-1645477247972-c388b0c8ed6f?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                    </div>
-                    <div>
-                        <h2 className='heading'>Ladies Leather Purse</h2>
-                        <h3>Price : Rs. 4500/-</h3>
-                    </div>
-                </div>
-                 <div className='card'>
-                    <div>
-                        <img className='img-style' src="https://images.unsplash.com/photo-1660603135468-6e3be1a106c0?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                    </div>
-                    <div>
-                        <h2 className='product'>Wooden Table Lamp</h2>
-                        <h3>Price : Rs. 2500/-</h3>
-                    </div>
-                </div>
-                 <div className='card'>
-                    <div>
-                        <img className='img-style' src="https://images.unsplash.com/photo-1645477247972-c388b0c8ed6f?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                    </div>
-                    <div>
-                        <h2 className='heading'>Ladies Leather Purse</h2>
-                        <h3>Price : Rs. 4500/-</h3>
-                    </div>
-                </div>
-                 <div className='card'>
-                    <div>
-                        <img className='img-style' src="https://images.unsplash.com/photo-1660603135468-6e3be1a106c0?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                    </div>
-                    <div>
-                        <h2 className='heading'>Wooden Table Lamp</h2>
-                        <h3>Price : Rs. 2500/-</h3>
-                    </div>
-                </div>
-                 <div className='card'>
-                    <div>
-                        <img className='img-style' src="https://images.unsplash.com/photo-1645477247972-c388b0c8ed6f?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                    </div>
-                    <div>
-                        <h2 className='heading'>Ladies Leather Purse</h2>
-                        <h3>Price : Rs. 4500/-</h3>
-                    </div>
-                </div>
-                 <div className='card'>
-                    <div>
-                        <img className='img-style' src="https://images.unsplash.com/photo-1660603135468-6e3be1a106c0?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                    </div>
-                    <div>
-                        <h2 className='heading'>Wooden Table Lamp</h2>
-                        <h3>Price : Rs. 2500/-</h3>
-                    </div>
-                </div>
-                 <div className='card'>
-                    <div>
-                        <img className='img-style' src="https://images.unsplash.com/photo-1645477247972-c388b0c8ed6f?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                    </div>
-                    <div>
-                        <h2 className='heading'>Ladies Leather Purse</h2>
-                        <h3>Price : Rs. 4500/-</h3>
-                    </div>
-                </div>
-                 <div className='card'>
-                    <div>
-                        <img className='img-style' src="https://images.unsplash.com/photo-1660603135468-6e3be1a106c0?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                    </div>
-                    <div>
-                        <h2 className='heading'>Wooden Table Lamp</h2>
-                        <h3>Price : Rs. 2500/-</h3>
-                    </div>
-                </div>
-                 <div className='card'>
-                    <div>
-                        <img className='img-style' src="https://images.unsplash.com/photo-1645477247972-c388b0c8ed6f?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-                    </div>
-                    <div>
-                        <h2 className='heading'>Ladies Leather Purse</h2>
-                        <h3>Price : Rs. 4500/-</h3>
-                    </div>
-                </div>
+    const Myheading=styled.h3 `
+    `;
 
-            </div>
+    const MyButton = styled.button`
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
 
-        </div>
-    )
+  &:hover {
+    background-color: darkblue;
+  }
+`;
+  return (
+    <div>
+        <h1>Styled Components</h1>
+        <Myheading>Hellow World</Myheading>
+        <MyButton>Download</MyButton>
+    </div>
+  )
 }
 
 export default Dummy1
