@@ -2,25 +2,26 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-function Dummy2() {
+function NavBar() {
   return (
     <>
-      
+     
+      <br />
       <Navbar bg="primary" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#features">About us</Nav.Link>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
+             <Nav.Link href="#pricing">Contact us</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
 
-      <br />
       
     </>
   );
 }
 
-export default Dummy2;
+export default NavBar;
