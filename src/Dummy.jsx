@@ -1,38 +1,42 @@
-import React from 'react'
-import { Button } from 'react-bootstrap';
-import Alert from 'react-bootstrap/Alert';
-import Dummy1 from './Dummy1';
-import Dropdown from 'react-bootstrap/Dropdown';
-import Dummy2 from './Dummy2';
-
-
+import React, { useRef, useState } from 'react'
 
 function Dummy() {
-  return (
-    <div style={{ padding: '20px',margin:'10px' }}>
-      <h1>React-Bootstrap</h1>
-      <Dummy2 />
-      
-      <Button onClick={()=> alert("File Downloaded")} variant="primary">Click Here</Button>
-      <Alert variant='dark'>This is My alert</Alert>
-      <br />
-       <Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
-        Our Stores
-      </Dropdown.Toggle>
+  const inputName=useRef();
+  const h1Ref=useRef();
+  const [col,setCol]=useState(true);
 
-      <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Lahore</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Karachi</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Peshawar</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Quetta</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-    <br />
-      <Dummy1 />
-     
-      
-      
+function nameHandler(){
+  console.log(inputName);
+  inputName.current.focus();
+  inputName.current.placeholder='Enter Name';
+  inputName.current.style.color='green';
+}
+
+function hideShow(){
+  if(inputName.current.style.display=='none')
+  {
+    inputName.current.style.display='inline';
+  }else{
+    inputName.current.style.display='none ';
+  }
+  
+
+}
+
+function h1Handler(){
+  setCol(!col);
+
+ col? h1Ref.current.style.color='green':h1Ref.current.style.color='black'
+}
+
+  return (
+    <div>
+      <h1 ref={h1Ref}>useRef Hook in React JS</h1>
+      <input ref={inputName} type="text" />
+      <button onClick={nameHandler}>Enter Name</button>
+      <br /><br />
+      <button onClick={hideShow}>Hide/Show</button>
+      <button onClick={h1Handler}>Change Color</button>
     </div>
   )
 }
