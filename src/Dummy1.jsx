@@ -1,15 +1,12 @@
 import React from 'react'
+import { forwardRef } from 'react'
 
-function Dummy1({showName , name, passWord}) {
-const user='Shahid Naeem';
-
-
+function Dummy1(props,ref) {
   return (
     <div>
-      <button onClick={()=>showName(name)}>Display User</button>
-      <button onClick={passWord}>Show Password</button>
+      <input type="text" ref={ref}/>
     </div>
   )
 }
 
-export default Dummy1
+export default forwardRef(Dummy1)

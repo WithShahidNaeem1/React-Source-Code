@@ -1,55 +1,25 @@
-import React, { useRef } from 'react'
+import React from 'react'
+import { useRef } from "react"
+import Dummy1 from './Dummy1';
 
-function UncontrolledComp() {
-    const user=useRef();
-    const pass=useRef();
+function Dummy() {
+   const year=useRef();
 
-    function formWithRef(event){
-        event.preventDefault();
-        const username=user.current.value;
-        const password=pass.current.value;
-        console.log("Username:",username," Password:",password);
-    }
+  function Year(){
+    year.current.focus();
+    year.current.value='2025';
+    year.current.style.color='red';
+    year.current.style.backgroundColor='lightblue';
+    
+  }
+
   return (
     <div>
-        <h1>Uncontrolled component ussing useRef</h1>
-        <form action="" onSubmit={formWithRef}>
-            <input type="text" ref={user} placeholder='Enter User Name' />
-            <br /><br />
-            <input type="password" ref={pass} placeholder='Enter Password' />
-            <br /><br />
-            <button>Submit with useRef</button>
-        </form>
+      <Dummy1 ref={year}/>
+      <br />
+      <button onClick={Year}>Enter Year</button>
     </div>
   )
 }
 
-export default UncontrolledComp
-
-// import React from 'react'
-
-// function UncontrolledComp() {
-
-//     function formHandler(event){
-//         event.preventDefault();
-//         const username=document.querySelector('#user').value;
-//         console.log(username);
-//         const password=document.querySelector('#pass').value;
-//         console.log(password);
-        
-//     }
-//   return (
-//     <div>
-//         <h1>UnControlled Components</h1>
-//         <form action="" onSubmit={formHandler}>
-//             <input type="text" id='user' placeholder='Enter User Name' />
-//             <br /><br />
-//             <input type="password" id='pass' placeholder='Enter Password' />
-//             <br /><br />
-//             <button>Submit</button>
-//         </form>
-//     </div>
-//   )
-// }
-
-// export default UncontrolledComp
+export default Dummy
